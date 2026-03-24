@@ -31,15 +31,15 @@ function Feed() {
         <h2>Unable to load videos</h2>
         {error?.status && <p>Status: {error.status}</p>}
         {error?.message && <p>Message: {error.message}</p>}
-        <p>Please check your API key or try again later.</p>
+        <p>Please check your internet connection or try again later.</p>
       </div>
     );
   }
 
   return (
-    <div style={{ display: "flex" }}>
-      {/* Sidebar */}
-      <Sidebar setCategory={setCategory} />
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      {/* Category Menu */}
+      <Sidebar selectedCategory={category} setSelectedCategory={setCategory} />
 
       {/* Video Grid */}
       <div
@@ -48,7 +48,6 @@ function Feed() {
           gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
           gap: "20px",
           padding: "20px",
-          flex: 1,
         }}
       >
         {data.items.map((video) => {
