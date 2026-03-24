@@ -182,3 +182,37 @@
     border-right-color: var(--border);
   }
 }
+
+/* ========================= */
+/* ✅ NEW MENU STYLES */
+/* ========================= */
+
+.menu-container {
+  display: flex;
+  gap: 10px;              /* space between buttons */
+  padding: 10px 20px;     /* space around menu */
+  overflow-x: auto;       /* scroll if too many */
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.menu-button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #e5e5e5;
+}
+
+/* Optional: active button */
+.menu-button.active {
+  background-color: black;
+  color: white;
+}
