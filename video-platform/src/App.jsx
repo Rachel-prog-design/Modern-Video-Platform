@@ -5,6 +5,7 @@ import VideoCardDetails from "./pages/VideoCardDetails";
 import ChannelDetails from "./pages/ChannelDetails";
 import SearchResults from "./pages/SearchResults";
 import SearchBar from "./components/Searchbar";
+import "./App.css";
 
 function App() {
   return (
